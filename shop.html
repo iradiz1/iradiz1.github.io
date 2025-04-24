@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Product</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+ 
+  <div id="overlay" class="overlay" onclick="closePanels()"></div>
+  
+<body class="shop-page">
+	<div class="top-bar">
+		<button class="menu-button">
+		  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+		  </svg>
+		</button>
+		<button class="brand-button" onclick="window.location.href='index.html'">KIORA</button>
+		<button class="cart-button">
+	  <span id="cart-count" class="cart-count" style="display: none;"><span class="item-count">0 item</span><br><span class="in-cart">in cart</span></span>
+	  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+		<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+	  </svg>
+	</button>
+	  </div>
+
+  <section class="section" id="products">
+	<h2>All Products</h2>
+	<div class="product-grid">
+	  <div class="product-card">
+		<img src="images/IMG_9093.jpeg" alt="Product 1" />
+		<h3>Product 1</h3>
+		<p>Description of product 1.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape1', 'images/IMG_9093.jpeg', 1.11)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/Nasal strips Ads + pink mouthtape.zip - 9.png" alt="Product 2" />
+		<h3>Product 2</h3>
+		<p>Description of product 2.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape2', 'images/Nasal strips Ads + pink mouthtape.zip - 9.png', 2.22)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/nose-tape.webp" alt="Product 3" />
+		<h3>Product 3</h3>
+		<p>Description of product 3.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape3', 'images/nose-tape.webp', 3.33)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/nose-tape.webp" alt="Product 4" />
+		<h3>Product 4</h3>
+		<p>Description of product 4.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape4', 'images/nose-tape.webp', 4.44)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/nose-tape.webp" alt="Product 5" />
+		<h3>Product 5</h3>
+		<p>Description of product 5.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape5', 'images/nose-tape.webp', 5.55)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/nose-tape.webp" alt="Product 6" />
+		<h3>Product 6</h3>
+		<p>Description of product 6.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape6', 'images/nose-tape.webp', 6.66)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	  <div class="product-card">
+		<img src="images/nose-tape.webp" alt="Product 7" />
+		<h3>Product 7</h3>
+		<p>Description of product 7.</p>
+		<button class="add-to-cart" onclick="addToCart('nose-tape7', 'images/nose-tape.webp', 7.77)">
+			<img src="images/add-to-cart.svg" alt="Add to Cart" class="cart-icon" />
+		  </button>
+	  </div>
+	</div>
+  </section>
+  
+  
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>Här kan du skriva info eller vad du vill on vad som hellst.</p>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Feature 1 - BS1.</li>
+        <li>Feature 2 - BS2.</li>
+        <li>Feature 3 - BS3.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: your@email.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Your Product. All rights reserved.</p>
+  </footer>
+
+  <div id="menu-panel" class="side-panel left">
+  <button class="close-button" onclick="closePanels()">&times;</button>
+  <nav class="menu-links">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='shop.html'">Shop</button>
+    <button onclick="window.location.href='#contact'">Contact Us</button>
+  </nav>
+</div>
+
+<div id="cart-panel" class="side-panel right">
+	<button class="close-button" onclick="closePanels()">&times;</button>
+	<h3 class="cart-title">Your Bag</h3>
+	<ul id="cart-items" class="cart-items"></ul>
+	<button class="go-to-cart-button" onclick="window.location.href='cart.html'">Go to checkout</button>
+  </div>
+
+  <script src="script.js"></script>
+  <div id="overlay" class="overlay" onclick="closePanels()"></div>
+</body>
+</html>

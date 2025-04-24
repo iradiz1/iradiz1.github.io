@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="cart-page">
+  <div class="top-bar">
+    <button class="menu-button" onclick="openMenu()">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+      </svg>
+    </button>
+    <button class="brand-button" onclick="window.location.href='index.html'">KIORA</button>
+    <button class="cart-button" onclick="openCart()">
+      <span id="cart-count" class="cart-count" style="display: none;"><span class="item-count">0 item</span><br><span class="in-cart">in cart</span></span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="menu-panel" class="side-panel left">
+    <button class="close-button" onclick="closePanels()">&times;</button>
+    <nav class="menu-links">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='shop.html'">Shop</button>
+      <button onclick="window.location.href='#contact'">Contact Us</button>
+    </nav>
+  </div>
+
+  <div id="cart-panel" class="side-panel right">
+    <button class="close-button" onclick="closePanels()">&times;</button>
+    <h3 class="cart-title">Your Bag</h3>
+    <ul id="cart-items" class="cart-items"></ul>
+    <button class="go-to-cart-button" onclick="window.location.href='cart.html'">Go to checkout</button>
+  </div>
+
+  <div id="overlay" class="overlay" onclick="closePanels()"></div>
+
+  <div class="checkout-container">
+    <div class="checkout-left">
+      <h2>Contact Information</h2>
+      <div class="input-group">
+        <label for="email">Email</label> 
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+
+      <h2>Shipping Address</h2>
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name">
+      </div>
+      <div class="input-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Street address">
+      </div>
+      <div class="input-group">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="City">
+      </div>
+      <div class="input-group">
+        <label for="zip">Postal Code</label>
+        <input type="text" id="zip" placeholder="ZIP / Postal Code">
+      </div>
+    </div>
+
+    <div class="checkout-right">
+      <h2>Order Summary</h2>
+      <div class="order-summary" id="order-summary">
+        <!-- JS will fill this with cart items -->
+        <div class="total" style="text-align: right; font-weight: bold; margin-right: 60px;">
+          Total: 0.00 €
+        </div>
+      </div>
+      <button class="checkout-button">Place Order</button>
+    </div>
+  </div>
+</body>
+</html>
